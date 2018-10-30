@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+          <title>thought packets</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta charset="utf-8" />
+        <!-- twitter card metadata -->
+<meta name="twitter:site" content="">
+<meta name="twitter:title" content=""RHCE - Getting Started"">
+<meta name="twitter:description" content="">
+        <!-- OG Tags -->
+<meta property="og:url" content="./rhce-getting-started.html"/>
+<meta property="og:title" content="thought packets | "RHCE - Getting Started"" />
+<meta property="og:description" content="" />
+        <!-- favicon -->
+        <!-- moment.js for date formatting -->
+        <script src="./theme/js/moment.js"></script>
+        <!-- css -->
+        <link rel="stylesheet" type="text/css" href="./theme/css/main.css" />
+		<script>
+			
+                /*! grunt-grunticon Stylesheet Loader - v2.1.2 | https://github.com/filamentgroup/grunticon | (c) 2015 Scott Jehl, Filament Group, Inc. | MIT license. */
+    
+    (function(e){function t(t,n,r,o){"use strict";function a(){for(var e,n=0;u.length>n;n++)u[n].href&&u[n].href.indexOf(t)>-1&&(e=!0);e?i.media=r||"all":setTimeout(a)}var i=e.document.createElement("link"),l=n||e.document.getElementsByTagName("script")[0],u=e.document.styleSheets;return i.rel="stylesheet",i.href=t,i.media="only x",i.onload=o||null,l.parentNode.insertBefore(i,l),a(),i}var n=function(r,o){"use strict";if(r&&3===r.length){var a=e.navigator,i=e.Image,l=!(!document.createElementNS||!document.createElementNS("http://www.w3.org/2000/svg","svg").createSVGRect||!document.implementation.hasFeature("http://www.w3.org/TR/SVG11/feature#Image","1.1")||e.opera&&-1===a.userAgent.indexOf("Chrome")||-1!==a.userAgent.indexOf("Series40")),u=new i;u.onerror=function(){n.method="png",n.href=r[2],t(r[2])},u.onload=function(){var e=1===u.width&&1===u.height,a=r[e&&l?0:e?1:2];n.method=e&&l?"svg":e?"datapng":"png",n.href=a,t(a,null,null,o)},u.src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==",document.documentElement.className+=" grunticon"}};n.loadCSS=t,e.grunticon=n})(this);(function(e,t){"use strict";var n=t.document,r="grunticon:",o=function(e){if(n.attachEvent?"complete"===n.readyState:"loading"!==n.readyState)e();else{var t=!1;n.addEventListener("readystatechange",function(){t||(t=!0,e())},!1)}},a=function(e){return t.document.querySelector('link[href$="'+e+'"]')},c=function(e){var t,n,o,a,c,i,u={};if(t=e.sheet,!t)return u;n=t.cssRules?t.cssRules:t.rules;for(var l=0;n.length>l;l++)o=n[l].cssText,a=r+n[l].selectorText,c=o.split(");")[0].match(/US\-ASCII\,([^"']+)/),c&&c[1]&&(i=decodeURIComponent(c[1]),u[a]=i);return u},i=function(e){var t,o,a;o="data-grunticon-embed";for(var c in e)if(a=c.slice(r.length),t=n.querySelectorAll(a+"["+o+"]"),t.length)for(var i=0;t.length>i;i++)t[i].innerHTML=e[c],t[i].style.backgroundImage="none",t[i].removeAttribute(o);return t},u=function(t){"svg"===e.method&&o(function(){i(c(a(e.href))),"function"==typeof t&&t()})};e.embedIcons=i,e.getCSS=a,e.getIcons=c,e.ready=o,e.svgLoadedCallback=u,e.embedSVG=u})(grunticon,this);
+                
+                grunticon(["./theme/css/icons.data.svg.css", "./theme/css/icons.data.png.css", "./theme/css/icons.fallback.css"]);
+            </script>
+        <noscript><link href="./theme/css/icons.fallback.css" rel="stylesheet"></noscript>
+        <!-- menu toggle javascript -->
+        <script type="text/javascript">
+            document.addEventListener("DOMContentLoaded", initMenu);
+            
+            function initMenu(){
+                var menu = document.getElementById("menu");
+                var menulink = document.getElementById("menu-link");
+                menulink.addEventListener("click", function toggleMenu(){
+                        window.event.preventDefault();
+                        menulink.classList.toggle('active');
+                        menu.classList.toggle('active');              
+                    });
+            };
+        </script>
+
+
+    <meta name="tags" content="["RHCE"" />
+    <meta name="tags" content=""Projects"]" />
+
+</head>
+<body>
+    <div role="banner" id="masthead">
+        <header>
+            <h1><a href="/">'s Blog</a></h1>
+            <a href="#menu" id="menu-link">more stuff</a>
+            <nav id="menu">
+                <ul>
+                            <li><a href="./category/about.html">about</a></li>
+                            <li><a href="./category/links.html">links</a></li>
+                            <li class="active"><a href="./category/project.html">project</a></li>
+                </ul>
+            </nav>
+        </header>
+    </div>
+        <div class="page" role="main">
+  <div class="article" role="article">
+    <article>
+        <footer>
+            <a name="top"></a>
+            <p>
+              <time datetime=" 2018-05-30 22:40:37-04:00">
+                <script>document.write(moment('2018-05-30 22:40:37-04:00').format('LL'));</script>
+              </time>
+            </p>
+        </footer>
+        <header>
+          <h2>
+            "RHCE - Getting Started"
+          </h2>
+        </header>
+      <div class="content">
+         <h1>RHCE Project Based Study</h1>
+<h2>Q. How do you study for a big test?</h2>
+<p>Do you read, take notes, and highlight? Do you practice all the exercises until they are second nature? Do you work by yourself or with a group?
+Are you making flash cards right now? Those are all valid strategies for passing a test. If they work for you, great! Some of this works for me, 
+if I read on a subject and write down a few notes, it's likely I will retain a good bit of the information. If the test is multiple-choice, essay style, I have a pretty good chance at passing. </p>
+<h3>What about a practical exam?</h3>
+<p>As someone who has trained in martial arts for several years, I've come to understand that an exam is a demonstration of understanding,
+an exhibition of intent and interest. There is a big difference between someone who has memorized a set of techniques and a student who 
+has examined, researched, and internalized concepts.</p>
+<p>In every book and cert class I have taken, the requirements to pass the exam have been expertly covered in as much depth as possible in
+the allotted time. It's a proper review of the concepts and application, however, the perfect world lab that you begin with generally lacks
+two things;</p>
+<ol>
+<li>Guidance on how to understand a thing that is broken and fix it in a time-pressured situation.</li>
+<li>An honest assessment of your engagement with the tools your are being tested on. </li>
+</ol>
+<p><em>The first time I was faced with a practical exam, sitting for the RHCSA, I failed because I studied for the exam, instead of learning the technology and how it is used.</em></p>
+<h3>A. Develop the ability to use and create meaningful tools with the subject matter being tested.</h3>
+<p>In one sense, I am studying for the Red Hat Certified Engineer exam. In another, I am developing my ability to act like, think as, and be an
+engineer. I may be able to <em>study</em> for the first one, but without application, the knowledge will be quickly lost. Accordingly, I will be 
+studying for this RHCE exam by creating, using, and maintaining the following projects;</p>
+<table>
+<thead>
+<tr>
+<th align="left">Project</th>
+<th align="left">Purpose</th>
+<th align="left">Objective</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><a href="/project/backups-with-restic-over-iscsi/">Simple Backups</a></td>
+<td align="left">Recovery - Data Safety</td>
+<td align="left">iscsi target and initiator configuration</td>
+</tr>
+<tr>
+<td align="left">Apache Server</td>
+<td align="left">CentOS 7 repos for VMs</td>
+<td align="left"><em>RHCSA objective</em> - useful for practice</td>
+</tr>
+<tr>
+<td align="left"><a href="/project/bonding-for-load-balancing/">Network Bond</a></td>
+<td align="left">"Optimize" network performance</td>
+<td align="left">Configure link aggregation</td>
+</tr>
+<tr>
+<td align="left">LAN DNS server</td>
+<td align="left">Speed website loading, host id</td>
+<td align="left">Configure caching only nameserver</td>
+</tr>
+<tr>
+<td align="left">Postfix server</td>
+<td align="left">email monitoring reports</td>
+<td align="left">Configure a system to send email</td>
+</tr>
+<tr>
+<td align="left">~~Wallabag app~~</td>
+<td align="left">Wasn't super happy with this app</td>
+<td align="left">Looking for a replacement atm</td>
+</tr>
+<tr>
+<td align="left">LAN System Reports emailed</td>
+<td align="left">Keep tabs on hosts</td>
+<td align="left">Configure System Reports</td>
+</tr>
+<tr>
+<td align="left">SAMBA Media Share</td>
+<td align="left">Play Music on various devices</td>
+<td align="left">Mounting Network File Systems</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"><em>What else?</em></td>
+</tr>
+</tbody>
+</table>
+<h4>What about the objectives I left out?</h4>
+<p>Good question. You can read up on the RHCE exam objectives at <a href="https://www.redhat.com/en/services/training/ex300-red-hat-certified-engineer-rhce-exam">redhat.com</a>. I will add to this project list in the next few weeks, but I also welcome suggestions from readers. I will post the ansible roles and playbooks I create as well as helpful details and suggestions I find along the way.</p>
+      </div>
+      <div class="back-to-top">
+          <a href="#top">back to top</a>
+      </div>
+    </article>
+  </div>
+<!-- end article -->
+                <footer>
+                    <div class="icons">
+                    </div>
+                    <p>© <script>document.write(moment().format('YYYY'));</script> Zach Villers</p>
+                </footer>
+        </div>
+</body>
+</html>
