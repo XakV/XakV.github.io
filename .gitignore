@@ -3,4 +3,3 @@ Makefile
 content
 develop_server.sh
 *.py
-theme
