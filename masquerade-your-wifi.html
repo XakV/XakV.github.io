@@ -6,11 +6,11 @@
         <meta charset="utf-8" />
         <!-- twitter card metadata -->
 <meta name="twitter:site" content="">
-<meta name="twitter:title" content="Dev Help Links">
+<meta name="twitter:title" content="Masquerade of the Wifi Device">
 <meta name="twitter:description" content="">
         <!-- OG Tags -->
-<meta property="og:url" content="./devel-links.html"/>
-<meta property="og:title" content="thought packets | Dev Help Links" />
+<meta property="og:url" content="./masquerade-your-wifi.html"/>
+<meta property="og:title" content="thought packets | Masquerade of the Wifi Device" />
 <meta property="og:description" content="" />
         <!-- favicon -->
         <!-- moment.js for date formatting -->
@@ -42,7 +42,9 @@
         </script>
 
 
-    <meta name="tags" content="development" />
+    <meta name="tags" content="Linux" />
+    <meta name="tags" content="Firewall" />
+    <meta name="tags" content="libvirt" />
 
 </head>
 <body>
@@ -53,8 +55,8 @@
             <nav id="menu">
                 <ul>
                             <li><a href="./category/about.html">About</a></li>
-                            <li class="active"><a href="./category/links.html">Links</a></li>
-                            <li><a href="./category/posts.html">Posts</a></li>
+                            <li><a href="./category/links.html">Links</a></li>
+                            <li class="active"><a href="./category/posts.html">Posts</a></li>
                             <li><a href="./category/rhce.html">RHCE</a></li>
                 </ul>
             </nav>
@@ -66,24 +68,31 @@
         <footer>
             <a name="top"></a>
             <p>
-              <time datetime=" 2018-10-15 00:00:00-04:00">
-                <script>document.write(moment('2018-10-15 00:00:00-04:00').format('LL'));</script>
+              <time datetime=" 2018-10-30 23:20:00-04:00">
+                <script>document.write(moment('2018-10-30 23:20:00-04:00').format('LL'));</script>
               </time>
             </p>
         </footer>
         <header>
           <h2>
-            Dev Help Links
+            Masquerade of the Wifi Device
           </h2>
         </header>
       <div class="content">
-         <h3><strong>General Development</strong></h3>
-<p><a href="https://duckduckgo.com/?q=markdown+cheat+sheet&amp;bext=lfa&amp;atb=v47-2&amp;ia=answer&amp;iax=1">markdown</a> 
- <a href="https://devdocs.io/">devdocs.io</a>                                                           <br>
-<a href="http://awk.info/?OneLiners">awk 1 liners</a>                                                  <br>
-<a href="https://github.com/ansible/ansible-jupyter-kernel">ansible jupyter</a>                        <br>
-<a href="https://regex101.com/">regex101</a>                                                           <br>
-<a href="http://palettegenerator.com/">colorpalette generator</a>                                        </p>
+         <h3>Ever try to run libvirt on your laptop WiFi?</h3>
+<p>Please untie the noose, it will be ok....I think. The long and short of this is, libvirtd can't use a WiFi device. Which creates pain for me. Setting the wifi device to forward ipv4 and then using firewalld to masquerade packets between the laptop's wifi and ethernet device seems to work.</p>
+<p><strong>Like This</strong></p>
+<div class="highlight"><pre><span></span>    firewall-cmd --direct --add-rule ipv4 nat POSTROUTING 0 -o wlp3s0 -j MASQUERADE
+    firewall-cmd --direct --add-rule ipv4 filter FORWARD 0 -i enp0s25 -o wlp3s0 -j accept
+    firewall-cmd --direct --add-rule ipv4 filter FORWARD 0 -i enp0s25 -o wlp3s0 -j ACCEPT
+    firewall-cmd --direct --add-rule ipv4 filter FORWARD 0 -i wlp3s0 -o enp0s25 -m state --state RELATED,ESTABLISHED -j ACCEPT
+    firewall-cmd --runtime-to-permanent
+</pre></div>
+
+
+<p><strong>DONT FORGET TO SET THE IPV4 SYSCTL Tunable</strong></p>
+<div class="highlight"><pre><span></span>    sysctl -p net.ipv4.blah.blah.thing
+</pre></div>
       </div>
       <div class="back-to-top">
           <a href="#top">back to top</a>
