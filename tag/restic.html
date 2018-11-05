@@ -1,98 +1,230 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-        <title>thought packets</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta charset="utf-8" />
-        <!-- twitter card metadata -->
-        <!-- OG Tags -->
-<meta property="og:url" content="../tag/Restic"/>
-<meta property="og:title" content="thought packets | Restic" />
-        <!-- favicon -->
-        <!-- moment.js for date formatting -->
-        <script src="../theme/js/moment.js"></script>
-        <!-- css -->
-        <link rel="stylesheet" type="text/css" href="../theme/css/main.css" />
-		<script>
-			
-                /*! grunt-grunticon Stylesheet Loader - v2.1.2 | https://github.com/filamentgroup/grunticon | (c) 2015 Scott Jehl, Filament Group, Inc. | MIT license. */
-    
-    (function(e){function t(t,n,r,o){"use strict";function a(){for(var e,n=0;u.length>n;n++)u[n].href&&u[n].href.indexOf(t)>-1&&(e=!0);e?i.media=r||"all":setTimeout(a)}var i=e.document.createElement("link"),l=n||e.document.getElementsByTagName("script")[0],u=e.document.styleSheets;return i.rel="stylesheet",i.href=t,i.media="only x",i.onload=o||null,l.parentNode.insertBefore(i,l),a(),i}var n=function(r,o){"use strict";if(r&&3===r.length){var a=e.navigator,i=e.Image,l=!(!document.createElementNS||!document.createElementNS("http://www.w3.org/2000/svg","svg").createSVGRect||!document.implementation.hasFeature("http://www.w3.org/TR/SVG11/feature#Image","1.1")||e.opera&&-1===a.userAgent.indexOf("Chrome")||-1!==a.userAgent.indexOf("Series40")),u=new i;u.onerror=function(){n.method="png",n.href=r[2],t(r[2])},u.onload=function(){var e=1===u.width&&1===u.height,a=r[e&&l?0:e?1:2];n.method=e&&l?"svg":e?"datapng":"png",n.href=a,t(a,null,null,o)},u.src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==",document.documentElement.className+=" grunticon"}};n.loadCSS=t,e.grunticon=n})(this);(function(e,t){"use strict";var n=t.document,r="grunticon:",o=function(e){if(n.attachEvent?"complete"===n.readyState:"loading"!==n.readyState)e();else{var t=!1;n.addEventListener("readystatechange",function(){t||(t=!0,e())},!1)}},a=function(e){return t.document.querySelector('link[href$="'+e+'"]')},c=function(e){var t,n,o,a,c,i,u={};if(t=e.sheet,!t)return u;n=t.cssRules?t.cssRules:t.rules;for(var l=0;n.length>l;l++)o=n[l].cssText,a=r+n[l].selectorText,c=o.split(");")[0].match(/US\-ASCII\,([^"']+)/),c&&c[1]&&(i=decodeURIComponent(c[1]),u[a]=i);return u},i=function(e){var t,o,a;o="data-grunticon-embed";for(var c in e)if(a=c.slice(r.length),t=n.querySelectorAll(a+"["+o+"]"),t.length)for(var i=0;t.length>i;i++)t[i].innerHTML=e[c],t[i].style.backgroundImage="none",t[i].removeAttribute(o);return t},u=function(t){"svg"===e.method&&o(function(){i(c(a(e.href))),"function"==typeof t&&t()})};e.embedIcons=i,e.getCSS=a,e.getIcons=c,e.ready=o,e.svgLoadedCallback=u,e.embedSVG=u})(grunticon,this);
-                
-                grunticon(["../theme/css/icons.data.svg.css", "../theme/css/icons.data.png.css", "../theme/css/icons.fallback.css"]);
-            </script>
-        <noscript><link href="../theme/css/icons.fallback.css" rel="stylesheet"></noscript>
-        <!-- menu toggle javascript -->
-        <script type="text/javascript">
-            document.addEventListener("DOMContentLoaded", initMenu);
-            
-            function initMenu(){
-                var menu = document.getElementById("menu");
-                var menulink = document.getElementById("menu-link");
-                menulink.addEventListener("click", function toggleMenu(){
-                        window.event.preventDefault();
-                        menulink.classList.toggle('active');
-                        menu.classList.toggle('active');              
-                    });
-            };
-        </script>
+<head prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article#">
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width">
+  <title>thought packets - Restic</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css">
+    <link rel="stylesheet" href="../theme/css/main.be52aa87.css">
+  <style media="print">.is-hidden-print{display:none !important}</style>
 </head>
-<body>
-    <div role="banner" id="masthead">
-        <header>
-            <h1><a href="/">thought packets</a></h1>
-            <a href="#menu" id="menu-link">more stuff</a>
-            <nav id="menu">
-                <ul>
-                            <li><a href="../category/about.html">About</a></li>
-                            <li><a href="../category/links.html">Links</a></li>
-                            <li><a href="../category/posts.html">Posts</a></li>
-                            <li><a href="../category/rhce.html">RHCE</a></li>
-                </ul>
-            </nav>
-        </header>
-    </div>
-        <div class="page" role="main">
-<div class="page-title">
-    <h1>Restic</h1>
-</div>
-<div class="articles">
-        <ol>
-            <li>
-                <article>
-                    <footer>
-                         <p>
-                            <time datetime="2018-10-16 23:20:00-04:00">
-                                <script>document.write(moment('2018-10-16 23:20:00-04:00').format('LL'));</script>
-                            </time>
-                                    in <a href="../category/rhce.html"><span class="category-tag">RHCE</span></a>
-                        </p>
-                    </footer>
-                    <header>
-                        <a href="../restic-via-iscsi.html">
-                            <h2>Backup to an iSCSI share using Restic</h2>
-                        </a>
-                    </header>
-                    <div class="summary"> </div>
-                    <div class="tags">
-                        <ul class="tags">
-                            <li><a href="../tag/restic.html" class="tag">Restic</a></li>
-                            <li><a href="../tag/backups.html" class="tag">Backups</a></li>
-                            <li><a href="../tag/iscsi.html" class="tag">iSCSI</a></li>
-                        </ul>
-                    </div>
-                    <a href="../restic-via-iscsi.html">
-                        <p class="readmore">Read more...</p>
-                    </a>
-                </article>
-            </li>
-        </ol>
-        
-</div>                <footer>
-                    <div class="icons">
-                    </div>
-                    <p>© <script>document.write(moment().format('YYYY'));</script> Zach Villers</p>
-                </footer>
+
+<body id="index" class="home">
+<header class="hero is-primary">
+  <div class="hero-head">
+    <div class="container">
+      <nav class="navbar">
+        <div class="navbar-brand">
+          <a class="navbar-item title is-3"
+             href="../">thought packets</a>
         </div>
+      </nav>
+    </div>
+  </div>
+</header>
+
+<nav class="navbar has-shadow is-hidden-print">
+  <div class="container">
+    <div class="navbar-center"></div>
+    <span id="navToggle" class="navbar-burger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </span>
+    <div id="navMenu" class="navbar-menu">
+        <div class="navbar-end">
+              <a class="navbar-item is-tab "
+                 href="../category/rhce.html">RHCE</a>
+              <a class="navbar-item is-tab "
+                 href="../category/posts.html">Posts</a>
+              <a class="navbar-item is-tab "
+                 href="../category/links.html">Links</a>
+              <a class="navbar-item is-tab "
+                 href="../category/about.html">About</a>
+        </div>
+    </div>
+  </div>
+</nav>
+
+<div class="container">
+  <div class="section columns">
+    <div class="column is-three-quarters-desktop is-two-thirds-tablet">
+      <aside id="featured" class="body">
+        <article>
+          <h1 class="title">
+            <a href="../restic-via-iscsi.html">Backup to an iSCSI share using Restic</a>
+          </h1>
+<footer class="post-info">
+  <abbr class="published" title="2018-10-16T23:20:00-04:00">
+    Published <span class="is-info">Tue 16 October 2018</span>
+    in <a href="../category/rhce.html">RHCE</a>
+  </abbr>
+
+    <p class="author">
+      <em>by           <a class="url fn" href="../author/zach-villers.html">Zach Villers</a>
+</em>
+      <span class="tag is-small is-rounded">
+        <a href="../tag/restic.html">Restic</a>
+      </span>
+      <span class="tag is-small is-rounded">
+        <a href="../tag/backups.html">Backups</a>
+      </span>
+      <span class="tag is-small is-rounded">
+        <a href="../tag/iscsi.html">iSCSI</a>
+      </span>
+    </p>
+  
+</footer>          <div class="section">
+            <h1>Backing up with Restic over iscsi:</h1>
+<h2>You do have backups, don't you?</h2>
+<p>Everyone has pictures, videos, books, life memories, documents, etc, that are irreplaceable. Baby's first steps, wedding videos, memories of  that
+time you went to that place and did the thing. You want these to stay with you, right? Whether production or personal, you NEED backups of your
+data.</p>
+<h2>Why iscsi? What's restic?</h2>
+<p>I know I need a good, simple backup system. I've tried a few, but wasn't really happy with any of them, either the set-up was painful, or the
+tooling was painful to use. I first learned about Restic from this <a href="https://fedoramagazine.org/use-restic-encrypted-backups/">Fedora Magazine</a> article. Reading the Restic <a href="https://restic.readthedocs.io">docs</a>_ you get lots of choices for storage backends, simple cli tools for scripting,
+and an easy install. An ideal of the unix tradition is mixing and matching single-purpose tools to create useful systems and Restic lends itself well to this purpose. </p>
+<p>Using iscsi with Restic isn't necessary, in fact, since the machines I am using on my LAN have ssh access to each other, iscsi is just extra complexity. It's the first thing I thought of as a project, and it is working quite well, so I plan to stick with it. Linux iscsi tools allow you to share storage from one or more machines over the network. If you are familiar with a NAS (Network Attached Storage), this is similar, but different. 
+My basic understanding is that with a NAS unit, you are exposing an appliance with storage and a file system over your LAN. Linux iscsi tooling creates a SAN (Storage Area Network) that exposes block devices to properly configured clients. The iscsi client is called an "initiator", while the server is called a "target." Why target/initiator? Ummm...good question.</p>
+<hr>
+<h2>Ok, how do you do that? Part 1 - iscsi target</h2>
+<p>The iscsi "target" or server needs a CLI tool named <strong>targetcli</strong>. On CentOS 7, this is a simple yum command.</p>
+<div class="highlight"><pre><span></span>        yum -y install targetcli
+</pre></div>
+
+
+<p>Using targetcli is mostly straightforward, thanks to good examples in the man page and tab completion. The basic idea is as follows;</p>
+<p><strong>Create or configure storage to share.</strong> This can be an actual block device/partition/LVM or a large file backstore <em>think of a swap file, but for storage, not swap space</em>.</p>
+<p><code>sh
+   [root@target-server ~]# targetcli
+               targetcli shell version 2.1.fb46
+               Copyright 2011-2013 by Datera, Inc and others.
+               For help on commands, type 'help'.
+               /&gt; backstores/block/ create block1 /dev/vg/lv_iscsi</code></p>
+<p><strong>Create a name for your share.</strong> The name follows a sort of reverse DNS scheme, starting with the letters "iqn", and ending with a target name.</p>
+<p>```sh
+   /&gt; iscsi/ create iqn.2018-06.local.target-server:target1</p>
+<p>Created target iqn.2018-06.local.target-server:target1.
+   Created TPG 1.
+   Global pref auto_add_default_portal=true
+   Created default portal listening on all IPs (0.0.0.0), port 3260.
+   ```</p>
+<p>In this case, I am using <em>.local</em> as the lan domain and <em>.target-server</em> as the machine name. The target name you want to create must be
+   separated by a colon <em>":"</em>. The first two steps result in a "target portal group", abbreviated "TPG". The target/server offers a portal to connect to backstore.</p>
+<p><strong>Create a LUN (logical unit number) for the named store under the new <code>iscsi/iqn.2018-06.local.target-server:target1/tpg1</code> directory.</strong></p>
+<p><code>sh
+   /&gt; cd iscsi/iqn.2018-06.local.target-server:target1/tpg1
+   /iscsi/iqn.2018-06.local.target-server:target1/tpg1&gt; luns/ create /backstores/block/block1</code></p>
+<p><strong>Set up access for the initiator/client, known as an  ACL for the logical storage unit/</strong></p>
+<p><code>sh
+   /iscsi/iqn.2018-06.local.target-server:target1/tpg1&gt; acls/ create iqn.2018-06.local.target-server:client</code></p>
+<p>You can set a password for the share (I didn't). Make sure to copy the acl you've just created, this goes in your initiatorname.iscsi config file on the client. As always, <code>systemd enable --now target</code> will enable the target shares on reboot.</p>
+<p><strong>Remember to open the appropriate firewall port (3260/tcp)</strong></p>
+<p><code>sh
+   firewall-cmd --add-port=3260/tcp --permanent &amp;&amp; firewall-cmd --runtime-to-permanent</code></p>
+<hr>
+<h2>Ok, how do you do that? Part 2 - iscsi initiator</h2>
+<p>Moving to the client (aka initiator), we also need to install a bit of tooling.</p>
+<div class="highlight"><pre><span></span>       yum -y install iscsi-initiator-utils
+</pre></div>
+
+
+<p>This provides the <code>iscsiadm</code> command, which must be run as root or with sudo. There are three steps to connect to the shared storage on the server;</p>
+<p><strong>Configure the initiatorname in <code>/etc/iscsi/initiatorname.iscsi</code></strong></p>
+<p><code>sh
+   [root@client.local]$ echo 'InitiatorName=iqn.2018-06.local.target-server:client' &gt;&gt; /etc/iscsi/initiatorname.iscsi</code></p>
+<p><strong>Add the target server to the iscsi discovery database.</strong></p>
+<p><code>sh
+   [root@client.local]$ iscsiadm --mode discovery --type sendtargets --portal 0.0.0.0</code></p>
+<p><em>NOTE: instead of 0.0.0.0 - use the actual IP of the server.</em></p>
+<p><strong>Login to the target.</strong></p>
+<p><code>sh
+   [root@client.local]$ iscsiadm --mode node --name iqn.2018-06.local.target-server:target1 --portal 0.0.0.0 --login</code></p>
+<p>After a successful login, you can mount the storage wherever you like and create a filesystem on it.</p>
+<hr>
+<h2>Ok, how do you do that? Part 3 - Restic</h2>
+<p>Restic is easily installed, see the docs <a href="https://restic.readthedocs.io/en/stable/020_installation.html">here</a> for distro/os specific 
+directions. I am using the iscsi share I have mounted at /opt/Backups and again, following the docs by restic, you will;</p>
+<ul>
+<li>Initialize a "repo" for backups</li>
+<li>Create your first backup</li>
+<li>Learn how to check and restore from your backups</li>
+</ul>
+<p>The final step I took is to schedule backups with cron (or a systemd timer), which I have done in my Ansible role for restic.</p>
+<h2>And now to Ansiblize it</h2>
+<p>Since Ansible isn't the primary focus of this series, I will just link to my ansible repo <a href="https://github.com/AffableZonkey/ChongoChingi.git">here</a>. Hopefully this helps you get started with iscsi and restic. Feedback is appreciated!</p>
+          </div>
+        </article>
+      </aside>
+    </div>
+
+    <div class="column is-one-quarter-desktop is-one-third-tablet is-hidden-print">
+      <aside class="menu">
+          <p class="menu-label">Links</p>
+          <ul class="menu-list">
+              <li><a href="http://getpelican.com/">
+                <span class="icon is-small"><i class="fa fa-globe fa-fw"></i></span>
+                <span class="link-text">Pelican</span>
+              </a></li>
+              <li><a href="http://python.org/">
+                <span class="icon is-small"><i class="fa fa-globe fa-fw"></i></span>
+                <span class="link-text">Python.org</span>
+              </a></li>
+          </ul>
+<p class="menu-label">Social</p>
+<ul class="menu-list">
+    <li><a href="https://github.com/XakV">
+      <span class="icon is-small">
+          <i class="fa fa-github fa-fw"></i>
+      </span>
+      <span class="link-text">Github</span>
+    </a></li>
+    <li><a href="https://pagure.io/user/aikidouke">
+      <span class="icon is-small">
+          <i class="fa fa-globe fa-fw"></i>
+      </span>
+      <span class="link-text">Pagure.io</span>
+    </a></li>
+    <li><a href="https://admin.fedoraproject.org/accounts/user/view/aikidouke">
+      <span class="icon is-small">
+          <i class="fa fa-globe fa-fw"></i>
+      </span>
+      <span class="link-text">Fedora - Aikidouke</span>
+    </a></li>
+    <li><a href="https://fosstodon.org/web/accounts/45241">
+      <span class="icon is-small">
+          <i class="fa fa-globe fa-fw"></i>
+      </span>
+      <span class="link-text">Fosstodon.org - Denderix</span>
+    </a></li>
+</ul>      </aside>
+    </div>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="container has-text-centered">
+    <div class="credits">
+      <span><a href="https://github.com/textbook/bulrush">Bulrush</a> theme for
+        <a href="https://blog.getpelican.com/">Pelican</a></span>
+      <span><span class="icon is-small"><i class="fa fa-html5"></i></span> HTML 5</span>
+      <span><span class="icon is-small"><i class="fa fa-css3"></i></span> CSS 3</span>
+      <img class="badge" src="https://bulma.io/images/made-with-bulma--black.png">
+    </div>
+  </div>
+</footer>
+
+<script type="text/javascript">
+  document.getElementById('navToggle').addEventListener('click', function () {
+    var nav = document.getElementById('navMenu');
+    var className = nav.getAttribute('class');
+    if (className == 'navbar-menu') {
+      nav.className = 'navbar-menu is-active';
+    } else {
+      nav.className = 'navbar-menu';
+    }
+  });
+</script>
 </body>
 </html>

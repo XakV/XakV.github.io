@@ -1,96 +1,175 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-        <title>thought packets</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta charset="utf-8" />
-        <!-- twitter card metadata -->
-        <!-- OG Tags -->
-<meta property="og:url" content="../tag/Networking"/>
-<meta property="og:title" content="thought packets | Networking" />
-        <!-- favicon -->
-        <!-- moment.js for date formatting -->
-        <script src="../theme/js/moment.js"></script>
-        <!-- css -->
-        <link rel="stylesheet" type="text/css" href="../theme/css/main.css" />
-		<script>
-			
-                /*! grunt-grunticon Stylesheet Loader - v2.1.2 | https://github.com/filamentgroup/grunticon | (c) 2015 Scott Jehl, Filament Group, Inc. | MIT license. */
-    
-    (function(e){function t(t,n,r,o){"use strict";function a(){for(var e,n=0;u.length>n;n++)u[n].href&&u[n].href.indexOf(t)>-1&&(e=!0);e?i.media=r||"all":setTimeout(a)}var i=e.document.createElement("link"),l=n||e.document.getElementsByTagName("script")[0],u=e.document.styleSheets;return i.rel="stylesheet",i.href=t,i.media="only x",i.onload=o||null,l.parentNode.insertBefore(i,l),a(),i}var n=function(r,o){"use strict";if(r&&3===r.length){var a=e.navigator,i=e.Image,l=!(!document.createElementNS||!document.createElementNS("http://www.w3.org/2000/svg","svg").createSVGRect||!document.implementation.hasFeature("http://www.w3.org/TR/SVG11/feature#Image","1.1")||e.opera&&-1===a.userAgent.indexOf("Chrome")||-1!==a.userAgent.indexOf("Series40")),u=new i;u.onerror=function(){n.method="png",n.href=r[2],t(r[2])},u.onload=function(){var e=1===u.width&&1===u.height,a=r[e&&l?0:e?1:2];n.method=e&&l?"svg":e?"datapng":"png",n.href=a,t(a,null,null,o)},u.src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==",document.documentElement.className+=" grunticon"}};n.loadCSS=t,e.grunticon=n})(this);(function(e,t){"use strict";var n=t.document,r="grunticon:",o=function(e){if(n.attachEvent?"complete"===n.readyState:"loading"!==n.readyState)e();else{var t=!1;n.addEventListener("readystatechange",function(){t||(t=!0,e())},!1)}},a=function(e){return t.document.querySelector('link[href$="'+e+'"]')},c=function(e){var t,n,o,a,c,i,u={};if(t=e.sheet,!t)return u;n=t.cssRules?t.cssRules:t.rules;for(var l=0;n.length>l;l++)o=n[l].cssText,a=r+n[l].selectorText,c=o.split(");")[0].match(/US\-ASCII\,([^"']+)/),c&&c[1]&&(i=decodeURIComponent(c[1]),u[a]=i);return u},i=function(e){var t,o,a;o="data-grunticon-embed";for(var c in e)if(a=c.slice(r.length),t=n.querySelectorAll(a+"["+o+"]"),t.length)for(var i=0;t.length>i;i++)t[i].innerHTML=e[c],t[i].style.backgroundImage="none",t[i].removeAttribute(o);return t},u=function(t){"svg"===e.method&&o(function(){i(c(a(e.href))),"function"==typeof t&&t()})};e.embedIcons=i,e.getCSS=a,e.getIcons=c,e.ready=o,e.svgLoadedCallback=u,e.embedSVG=u})(grunticon,this);
-                
-                grunticon(["../theme/css/icons.data.svg.css", "../theme/css/icons.data.png.css", "../theme/css/icons.fallback.css"]);
-            </script>
-        <noscript><link href="../theme/css/icons.fallback.css" rel="stylesheet"></noscript>
-        <!-- menu toggle javascript -->
-        <script type="text/javascript">
-            document.addEventListener("DOMContentLoaded", initMenu);
-            
-            function initMenu(){
-                var menu = document.getElementById("menu");
-                var menulink = document.getElementById("menu-link");
-                menulink.addEventListener("click", function toggleMenu(){
-                        window.event.preventDefault();
-                        menulink.classList.toggle('active');
-                        menu.classList.toggle('active');              
-                    });
-            };
-        </script>
+<head prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article#">
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width">
+  <title>thought packets - Networking</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css">
+    <link rel="stylesheet" href="../theme/css/main.be52aa87.css">
+  <style media="print">.is-hidden-print{display:none !important}</style>
 </head>
-<body>
-    <div role="banner" id="masthead">
-        <header>
-            <h1><a href="/">thought packets</a></h1>
-            <a href="#menu" id="menu-link">more stuff</a>
-            <nav id="menu">
-                <ul>
-                            <li><a href="../category/about.html">About</a></li>
-                            <li><a href="../category/links.html">Links</a></li>
-                            <li><a href="../category/posts.html">Posts</a></li>
-                            <li><a href="../category/rhce.html">RHCE</a></li>
-                </ul>
-            </nav>
-        </header>
-    </div>
-        <div class="page" role="main">
-<div class="page-title">
-    <h1>Networking</h1>
-</div>
-<div class="articles">
-        <ol>
-            <li>
-                <article>
-                    <footer>
-                         <p>
-                            <time datetime="2018-06-12 14:37:01-04:00">
-                                <script>document.write(moment('2018-06-12 14:37:01-04:00').format('LL'));</script>
-                            </time>
-                                    in <a href="../category/rhce.html"><span class="category-tag">RHCE</span></a>
-                        </p>
-                    </footer>
-                    <header>
-                        <a href="../network-teaming.html">
-                            <h2>Bonding for Load Balancing</h2>
-                        </a>
-                    </header>
-                    <div class="summary"> </div>
-                    <div class="tags">
-                        <ul class="tags">
-                            <li><a href="../tag/networking.html" class="tag">Networking</a></li>
-                        </ul>
-                    </div>
-                    <a href="../network-teaming.html">
-                        <p class="readmore">Read more...</p>
-                    </a>
-                </article>
-            </li>
-        </ol>
-        
-</div>                <footer>
-                    <div class="icons">
-                    </div>
-                    <p>© <script>document.write(moment().format('YYYY'));</script> Zach Villers</p>
-                </footer>
+
+<body id="index" class="home">
+<header class="hero is-primary">
+  <div class="hero-head">
+    <div class="container">
+      <nav class="navbar">
+        <div class="navbar-brand">
+          <a class="navbar-item title is-3"
+             href="../">thought packets</a>
         </div>
+      </nav>
+    </div>
+  </div>
+</header>
+
+<nav class="navbar has-shadow is-hidden-print">
+  <div class="container">
+    <div class="navbar-center"></div>
+    <span id="navToggle" class="navbar-burger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </span>
+    <div id="navMenu" class="navbar-menu">
+        <div class="navbar-end">
+              <a class="navbar-item is-tab "
+                 href="../category/rhce.html">RHCE</a>
+              <a class="navbar-item is-tab "
+                 href="../category/posts.html">Posts</a>
+              <a class="navbar-item is-tab "
+                 href="../category/links.html">Links</a>
+              <a class="navbar-item is-tab "
+                 href="../category/about.html">About</a>
+        </div>
+    </div>
+  </div>
+</nav>
+
+<div class="container">
+  <div class="section columns">
+    <div class="column is-three-quarters-desktop is-two-thirds-tablet">
+      <aside id="featured" class="body">
+        <article>
+          <h1 class="title">
+            <a href="../network-teaming.html">Bonding for Load Balancing</a>
+          </h1>
+<footer class="post-info">
+  <abbr class="published" title="2018-06-12T14:37:01-04:00">
+    Published <span class="is-info">Tue 12 June 2018</span>
+    in <a href="../category/rhce.html">RHCE</a>
+  </abbr>
+
+    <p class="author">
+      <em>by           <a class="url fn" href="../author/zach-villers.html">Zach Villers</a>
+</em>
+      <span class="tag is-small is-rounded">
+        <a href="../tag/networking.html">Networking</a>
+      </span>
+    </p>
+  
+</footer>          <div class="section">
+            <h2>I can't really claim to have a need for a load balancer at home, but...</h2>
+<p>Why should that stop us? My server was recovered from the ancient history section of Craigslist, but with a fresh install of <a href="www.centos.org">CentOS 7</a> it gets the few jobs done I ask of it;</p>
+<ul>
+<li>DNS server for my LAN</li>
+<li>iSCSI share for backing up hosts</li>
+<li>Serving up a CentOS repo for VMs to use</li>
+<li>Hosting a webpage that is accessible only on our LAN</li>
+</ul>
+<p>I had a two port 100G ethernet card stuck in it from a while back, which for a few days, helped it server as router connected only to an Rpi. Setting up a network bond device is easy and provides load balancing and failover. (It also is good practice for the RHCE exam)</p>
+<h2>For this small project, the nmtui cli tool works well enough for me.</h2>
+<div class="highlight"><pre><span></span>    yum -y install NetworkManager-tui
+</pre></div>
+
+
+<p>I only had one port left in the little switch near my server, so I used just two of the three interfaces available. We will create a new <em>bond</em> device, add two physical devices as "slaves" (seems like we could find a better word for that?), and then tell NetworkManager to apply the load-balancing configuration. I didn't want to spend a ton of time writing this, so I've cheated a bit and taken screenshots after.</p>
+<p>This is nmtui;</p>
+<p><img alt="nmtui" src="/nmtui.png"></p>
+<p>First, we will add a device;</p>
+<p><img alt="add interface" src="/addinterface.png"></p>
+<p>In the interface screen, we'll create a bond;</p>
+<p><img alt="create a bond" src="/bondcreate.png"></p>
+<p>To add the physical devices, we need to add "slaves";</p>
+<p><img alt="add slave" src="/addslave.png"></p>
+<p>Once you have added the slave devices, tell NetworkManager how you want the bonded device to behave. In this case we'll choose "Adaptive LoadBalance".</p>
+<p><img alt="load balancing" src="/loadbalancing.png"></p>
+<p>Finally, activate the connection. <strong>Reminder, be sure you have physical access to the machine or can reboot it without a terminal if necessary.</strong></p>
+<p><img alt="activate" src="/activate.png"></p>
+<p><img alt="activate bond" src="/activatebond.png"></p>
+<p>That's it folks...load balancing over a bonded pair of network devices.</p>
+          </div>
+        </article>
+      </aside>
+    </div>
+
+    <div class="column is-one-quarter-desktop is-one-third-tablet is-hidden-print">
+      <aside class="menu">
+          <p class="menu-label">Links</p>
+          <ul class="menu-list">
+              <li><a href="http://getpelican.com/">
+                <span class="icon is-small"><i class="fa fa-globe fa-fw"></i></span>
+                <span class="link-text">Pelican</span>
+              </a></li>
+              <li><a href="http://python.org/">
+                <span class="icon is-small"><i class="fa fa-globe fa-fw"></i></span>
+                <span class="link-text">Python.org</span>
+              </a></li>
+          </ul>
+<p class="menu-label">Social</p>
+<ul class="menu-list">
+    <li><a href="https://github.com/XakV">
+      <span class="icon is-small">
+          <i class="fa fa-github fa-fw"></i>
+      </span>
+      <span class="link-text">Github</span>
+    </a></li>
+    <li><a href="https://pagure.io/user/aikidouke">
+      <span class="icon is-small">
+          <i class="fa fa-globe fa-fw"></i>
+      </span>
+      <span class="link-text">Pagure.io</span>
+    </a></li>
+    <li><a href="https://admin.fedoraproject.org/accounts/user/view/aikidouke">
+      <span class="icon is-small">
+          <i class="fa fa-globe fa-fw"></i>
+      </span>
+      <span class="link-text">Fedora - Aikidouke</span>
+    </a></li>
+    <li><a href="https://fosstodon.org/web/accounts/45241">
+      <span class="icon is-small">
+          <i class="fa fa-globe fa-fw"></i>
+      </span>
+      <span class="link-text">Fosstodon.org - Denderix</span>
+    </a></li>
+</ul>      </aside>
+    </div>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="container has-text-centered">
+    <div class="credits">
+      <span><a href="https://github.com/textbook/bulrush">Bulrush</a> theme for
+        <a href="https://blog.getpelican.com/">Pelican</a></span>
+      <span><span class="icon is-small"><i class="fa fa-html5"></i></span> HTML 5</span>
+      <span><span class="icon is-small"><i class="fa fa-css3"></i></span> CSS 3</span>
+      <img class="badge" src="https://bulma.io/images/made-with-bulma--black.png">
+    </div>
+  </div>
+</footer>
+
+<script type="text/javascript">
+  document.getElementById('navToggle').addEventListener('click', function () {
+    var nav = document.getElementById('navMenu');
+    var className = nav.getAttribute('class');
+    if (className == 'navbar-menu') {
+      nav.className = 'navbar-menu is-active';
+    } else {
+      nav.className = 'navbar-menu';
+    }
+  });
+</script>
 </body>
 </html>

@@ -1,85 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-          <title>thought packets</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta charset="utf-8" />
-        <!-- twitter card metadata -->
-<meta name="twitter:site" content="">
-<meta name="twitter:title" content="Backup to an iSCSI share using Restic">
-<meta name="twitter:description" content="">
-        <!-- OG Tags -->
-<meta property="og:url" content="./restic-via-iscsi.html"/>
-<meta property="og:title" content="thought packets | Backup to an iSCSI share using Restic" />
-<meta property="og:description" content="" />
-        <!-- favicon -->
-        <!-- moment.js for date formatting -->
-        <script src="./theme/js/moment.js"></script>
-        <!-- css -->
-        <link rel="stylesheet" type="text/css" href="./theme/css/main.css" />
-		<script>
-			
-                /*! grunt-grunticon Stylesheet Loader - v2.1.2 | https://github.com/filamentgroup/grunticon | (c) 2015 Scott Jehl, Filament Group, Inc. | MIT license. */
-    
-    (function(e){function t(t,n,r,o){"use strict";function a(){for(var e,n=0;u.length>n;n++)u[n].href&&u[n].href.indexOf(t)>-1&&(e=!0);e?i.media=r||"all":setTimeout(a)}var i=e.document.createElement("link"),l=n||e.document.getElementsByTagName("script")[0],u=e.document.styleSheets;return i.rel="stylesheet",i.href=t,i.media="only x",i.onload=o||null,l.parentNode.insertBefore(i,l),a(),i}var n=function(r,o){"use strict";if(r&&3===r.length){var a=e.navigator,i=e.Image,l=!(!document.createElementNS||!document.createElementNS("http://www.w3.org/2000/svg","svg").createSVGRect||!document.implementation.hasFeature("http://www.w3.org/TR/SVG11/feature#Image","1.1")||e.opera&&-1===a.userAgent.indexOf("Chrome")||-1!==a.userAgent.indexOf("Series40")),u=new i;u.onerror=function(){n.method="png",n.href=r[2],t(r[2])},u.onload=function(){var e=1===u.width&&1===u.height,a=r[e&&l?0:e?1:2];n.method=e&&l?"svg":e?"datapng":"png",n.href=a,t(a,null,null,o)},u.src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==",document.documentElement.className+=" grunticon"}};n.loadCSS=t,e.grunticon=n})(this);(function(e,t){"use strict";var n=t.document,r="grunticon:",o=function(e){if(n.attachEvent?"complete"===n.readyState:"loading"!==n.readyState)e();else{var t=!1;n.addEventListener("readystatechange",function(){t||(t=!0,e())},!1)}},a=function(e){return t.document.querySelector('link[href$="'+e+'"]')},c=function(e){var t,n,o,a,c,i,u={};if(t=e.sheet,!t)return u;n=t.cssRules?t.cssRules:t.rules;for(var l=0;n.length>l;l++)o=n[l].cssText,a=r+n[l].selectorText,c=o.split(");")[0].match(/US\-ASCII\,([^"']+)/),c&&c[1]&&(i=decodeURIComponent(c[1]),u[a]=i);return u},i=function(e){var t,o,a;o="data-grunticon-embed";for(var c in e)if(a=c.slice(r.length),t=n.querySelectorAll(a+"["+o+"]"),t.length)for(var i=0;t.length>i;i++)t[i].innerHTML=e[c],t[i].style.backgroundImage="none",t[i].removeAttribute(o);return t},u=function(t){"svg"===e.method&&o(function(){i(c(a(e.href))),"function"==typeof t&&t()})};e.embedIcons=i,e.getCSS=a,e.getIcons=c,e.ready=o,e.svgLoadedCallback=u,e.embedSVG=u})(grunticon,this);
-                
-                grunticon(["./theme/css/icons.data.svg.css", "./theme/css/icons.data.png.css", "./theme/css/icons.fallback.css"]);
-            </script>
-        <noscript><link href="./theme/css/icons.fallback.css" rel="stylesheet"></noscript>
-        <!-- menu toggle javascript -->
-        <script type="text/javascript">
-            document.addEventListener("DOMContentLoaded", initMenu);
-            
-            function initMenu(){
-                var menu = document.getElementById("menu");
-                var menulink = document.getElementById("menu-link");
-                menulink.addEventListener("click", function toggleMenu(){
-                        window.event.preventDefault();
-                        menulink.classList.toggle('active');
-                        menu.classList.toggle('active');              
-                    });
-            };
-        </script>
-
-
-    <meta name="tags" content="Restic" />
-    <meta name="tags" content="Backups" />
-    <meta name="tags" content="iSCSI" />
-
+<head prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article#">
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width">
+  <title>Backup to an iSCSI share using Restic</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css">
+    <link rel="stylesheet" href="./theme/css/main.be52aa87.css">
+  <style media="print">.is-hidden-print{display:none !important}</style>
+<meta property="og:title" content="thought packets - Backup to an iSCSI share using Restic">
+  <meta property="og:description" content="Backup to an iSCSI share using Restic">
+<meta property="og:url" content="./restic-via-iscsi.html">
+<meta name="twitter:card" content="summary">
+<meta property="og:site_name" content="thought packets">
+<meta property="og:type" content="article">
+  <meta property="article:published_time" content="2018-10-16T23:20:00-04:00">
+    <meta property="article:tag" content="Restic">
+    <meta property="article:tag" content="Backups">
+    <meta property="article:tag" content="iSCSI">
+  <meta property="article:section" content="RHCE">
 </head>
-<body>
-    <div role="banner" id="masthead">
-        <header>
-            <h1><a href="/">thought packets</a></h1>
-            <a href="#menu" id="menu-link">more stuff</a>
-            <nav id="menu">
-                <ul>
-                            <li><a href="./category/about.html">About</a></li>
-                            <li><a href="./category/links.html">Links</a></li>
-                            <li><a href="./category/posts.html">Posts</a></li>
-                            <li class="active"><a href="./category/rhce.html">RHCE</a></li>
-                </ul>
-            </nav>
-        </header>
+
+<body id="index" class="home">
+<header class="hero is-primary">
+  <div class="hero-head">
+    <div class="container">
+      <nav class="navbar">
+        <div class="navbar-brand">
+          <a class="navbar-item title is-3"
+             href="./">thought packets</a>
+        </div>
+      </nav>
     </div>
-        <div class="page" role="main">
-  <div class="article" role="article">
-    <article>
-        <footer>
-            <a name="top"></a>
-            <p>
-              <time datetime=" 2018-10-16 23:20:00-04:00">
-                <script>document.write(moment('2018-10-16 23:20:00-04:00').format('LL'));</script>
-              </time>
-            </p>
-        </footer>
-        <header>
-          <h2>
-            Backup to an iSCSI share using Restic
-          </h2>
-        </header>
-      <div class="content">
-         <h1>Backing up with Restic over iscsi:</h1>
+  </div>
+</header>
+
+<nav class="navbar has-shadow is-hidden-print">
+  <div class="container">
+    <div class="navbar-center"></div>
+    <span id="navToggle" class="navbar-burger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </span>
+    <div id="navMenu" class="navbar-menu">
+        <div class="navbar-end">
+              <a class="navbar-item is-tab is-active"
+                 href="./category/rhce.html">RHCE</a>
+              <a class="navbar-item is-tab "
+                 href="./category/posts.html">Posts</a>
+              <a class="navbar-item is-tab "
+                 href="./category/links.html">Links</a>
+              <a class="navbar-item is-tab "
+                 href="./category/about.html">About</a>
+        </div>
+    </div>
+  </div>
+</nav>
+
+<div class="container">
+  <div class="section columns">
+    <div class="column is-three-quarters-desktop is-two-thirds-tablet">
+<section id="content" class="body">
+  <article>
+    <h1 class="title">
+      <a href="./restic-via-iscsi.html" rel="bookmark"
+         title="Permalink to Backup to an iSCSI share using Restic">Backup to an iSCSI share using Restic</a></h1>
+<footer class="post-info">
+  <abbr class="published" title="2018-10-16T23:20:00-04:00">
+    Published <span class="is-info">Tue 16 October 2018</span>
+    in <a href="./category/rhce.html">RHCE</a>
+  </abbr>
+
+    <p class="author">
+      <em>by           <a class="url fn" href="./author/zach-villers.html">Zach Villers</a>
+</em>
+      <span class="tag is-small is-rounded">
+        <a href="./tag/restic.html">Restic</a>
+      </span>
+      <span class="tag is-small is-rounded">
+        <a href="./tag/backups.html">Backups</a>
+      </span>
+      <span class="tag is-small is-rounded">
+        <a href="./tag/iscsi.html">iSCSI</a>
+      </span>
+    </p>
+  
+</footer>    <div class="section"><h1>Backing up with Restic over iscsi:</h1>
 <h2>You do have backups, don't you?</h2>
 <p>Everyone has pictures, videos, books, life memories, documents, etc, that are irreplaceable. Baby's first steps, wedding videos, memories of  that
 time you went to that place and did the thing. You want these to stay with you, right? Whether production or personal, you NEED backups of your
@@ -156,19 +163,82 @@ directions. I am using the iscsi share I have mounted at /opt/Backups and again,
 </ul>
 <p>The final step I took is to schedule backups with cron (or a systemd timer), which I have done in my Ansible role for restic.</p>
 <h2>And now to Ansiblize it</h2>
-<p>Since Ansible isn't the primary focus of this series, I will just link to my ansible repo <a href="https://github.com/AffableZonkey/ChongoChingi.git">here</a>. Hopefully this helps you get started with iscsi and restic. Feedback is appreciated!</p>
-      </div>
-      <div class="back-to-top">
-          <a href="#top">back to top</a>
-      </div>
-    </article>
+<p>Since Ansible isn't the primary focus of this series, I will just link to my ansible repo <a href="https://github.com/AffableZonkey/ChongoChingi.git">here</a>. Hopefully this helps you get started with iscsi and restic. Feedback is appreciated!</p></div>
+
+  </article>
+</section>
+
+<script type="application/ld+json">
+  {"articleSection": "RHCE", "author": {"@type": "Person", "name": "Zach Villers"}, "datePublished": "2018-10-16T23:20:00-04:00", "headline": "Backup to an iSCSI share using Restic", "mainEntityOfPage": {"@type": "WebPage", "@id": "./restic-via-iscsi.html"}, "@context": "http://schema.org", "@type": "BlogPosting", "description": "Backup to an iSCSI share using Restic"}
+</script>
+    </div>
+
+    <div class="column is-one-quarter-desktop is-one-third-tablet is-hidden-print">
+      <aside class="menu">
+          <p class="menu-label">Links</p>
+          <ul class="menu-list">
+              <li><a href="http://getpelican.com/">
+                <span class="icon is-small"><i class="fa fa-globe fa-fw"></i></span>
+                <span class="link-text">Pelican</span>
+              </a></li>
+              <li><a href="http://python.org/">
+                <span class="icon is-small"><i class="fa fa-globe fa-fw"></i></span>
+                <span class="link-text">Python.org</span>
+              </a></li>
+          </ul>
+<p class="menu-label">Social</p>
+<ul class="menu-list">
+    <li><a href="https://github.com/XakV">
+      <span class="icon is-small">
+          <i class="fa fa-github fa-fw"></i>
+      </span>
+      <span class="link-text">Github</span>
+    </a></li>
+    <li><a href="https://pagure.io/user/aikidouke">
+      <span class="icon is-small">
+          <i class="fa fa-globe fa-fw"></i>
+      </span>
+      <span class="link-text">Pagure.io</span>
+    </a></li>
+    <li><a href="https://admin.fedoraproject.org/accounts/user/view/aikidouke">
+      <span class="icon is-small">
+          <i class="fa fa-globe fa-fw"></i>
+      </span>
+      <span class="link-text">Fedora - Aikidouke</span>
+    </a></li>
+    <li><a href="https://fosstodon.org/web/accounts/45241">
+      <span class="icon is-small">
+          <i class="fa fa-globe fa-fw"></i>
+      </span>
+      <span class="link-text">Fosstodon.org - Denderix</span>
+    </a></li>
+</ul>      </aside>
+    </div>
   </div>
-<!-- end article -->
-                <footer>
-                    <div class="icons">
-                    </div>
-                    <p>© <script>document.write(moment().format('YYYY'));</script> Zach Villers</p>
-                </footer>
-        </div>
+</div>
+
+<footer class="footer">
+  <div class="container has-text-centered">
+    <div class="credits">
+      <span><a href="https://github.com/textbook/bulrush">Bulrush</a> theme for
+        <a href="https://blog.getpelican.com/">Pelican</a></span>
+      <span><span class="icon is-small"><i class="fa fa-html5"></i></span> HTML 5</span>
+      <span><span class="icon is-small"><i class="fa fa-css3"></i></span> CSS 3</span>
+      <img class="badge" src="https://bulma.io/images/made-with-bulma--black.png">
+    </div>
+  </div>
+</footer>
+
+<script type="text/javascript">
+  document.getElementById('navToggle').addEventListener('click', function () {
+    var nav = document.getElementById('navMenu');
+    var className = nav.getAttribute('class');
+    if (className == 'navbar-menu') {
+      nav.className = 'navbar-menu is-active';
+    } else {
+      nav.className = 'navbar-menu';
+    }
+  });
+</script>
 </body>
 </html>
