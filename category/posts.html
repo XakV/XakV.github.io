@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article#">
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width">
+  <title>thought packets - Posts</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css">
+    <link rel="stylesheet" href="../theme/css/main.610c74ec.css">
+  <style media="print">.is-hidden-print{display:none !important}</style>
+</head>
+
+<body id="index" class="home">
+<header class="hero is-primary">
+  <div class="hero-head">
+    <div class="container">
+      <nav class="navbar">
+        <div class="navbar-brand">
+          <a class="navbar-item title is-3"
+             href="../">thought packets</a>
+        </div>
+      </nav>
+    </div>
+  </div>
+</header>
+
+<nav class="navbar has-shadow is-hidden-print">
+  <div class="container">
+    <div class="navbar-center"></div>
+    <span id="navToggle" class="navbar-burger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </span>
+    <div id="navMenu" class="navbar-menu">
+        <div class="navbar-end">
+              <a class="navbar-item is-tab "
+                 href="../category/rhce.html">RHCE</a>
+              <a class="navbar-item is-tab is-active"
+                 href="../category/posts.html">Posts</a>
+              <a class="navbar-item is-tab "
+                 href="../category/links.html">Links</a>
+              <a class="navbar-item is-tab "
+                 href="../category/about.html">About</a>
+        </div>
+    </div>
+  </div>
+</nav>
+
+<div class="container">
+  <div class="section columns">
+    <div class="column is-three-quarters-desktop is-two-thirds-tablet">
+      <aside id="featured" class="body">
+        <article>
+          <h1 class="title">
+            <a href="../reset-znc-pass.html">Same thing we do every night Pinky, reset our ZNC password</a>
+          </h1>
+<footer class="post-info">
+  <abbr class="published" title="2018-11-08T10:44:00-05:00">
+    Published <span class="is-info">Thu 08 November 2018</span>
+    in <a href="../category/posts.html">Posts</a>
+  </abbr>
+
+    <p class="author">
+      <em>by           <a class="url fn" href="../author/zach-villers.html">Zach Villers</a>
+</em>
+      <span class="tag is-small is-rounded">
+        <a href="../tag/linux.html">Linux</a>
+      </span>
+      <span class="tag is-small is-rounded">
+        <a href="../tag/firewall.html">Firewall</a>
+      </span>
+      <span class="tag is-small is-rounded">
+        <a href="../tag/libvirt.html">libvirt</a>
+      </span>
+    </p>
+  
+</footer>          <div class="section">
+            <h3>If I write it down somewhere, I'll remember it. Why don't I do that with passwords?</h3>
+<p>~right~</p>
+<p>For the next time you forget your znc password, here is how to reset it.</p>
+<div class="highlight"><pre><span></span>    [me@abox]$ znc --makepass
+    [me@abox]$ # this returns a hash and a salted password
+    [me@abox]$ vi /var/run/znc/.znc/configs/znc.conf
+    [me@abox]$ # then copy/paste in the new password and hash
+    [me@abox]$ # it should be at the bottom of the config file
+</pre></div>
+
+
+<p>Easy, Peasey, and Lemon-Squeezey.</p>
+          </div>
+        </article>
+      </aside>
+  <div class="is-hidden-print">
+    <h2 class="subtitle">Other articles</h2>
+    <div class="columns is-multiline">
+        <div class="column is-half-tablet is-one-third-desktop">
+          <div class="card is-fullwidth is-fullheight">
+            <div class="card-content">
+              <a href="../masquerade-your-wifi.html">
+                <h3 class="title is-5">Masquerade of the Wifi Device</h3>
+                <div class="heading subtitle">Tue 30 October 2018</div>
+                <div><p>Do not brain this. It hurts. It's the magic config your laptop needs.</p></div>
+              </a>
+            </div>
+          </div>
+        </div>
+    </div>
+<nav class="pagination is-centered">
+    <a class="pagination-previous" href="#" disabled>
+      Previous
+    </a>
+    <a class="pagination-next" href="#" disabled>
+      Next page
+    </a>
+  <ul class="pagination-list">
+    <li>Page 1 / 1</li>
+  </ul>
+</nav>
+<br>  </div>
+    </div>
+
+    <div class="column is-one-quarter-desktop is-one-third-tablet is-hidden-print">
+      <aside class="menu">
+          <p class="menu-label">Links</p>
+          <ul class="menu-list">
+              <li><a href="http://getpelican.com/">
+                <span class="icon is-small"><i class="fa fa-globe fa-fw"></i></span>
+                <span class="link-text">Pelican</span>
+              </a></li>
+              <li><a href="http://python.org/">
+                <span class="icon is-small"><i class="fa fa-globe fa-fw"></i></span>
+                <span class="link-text">Python.org</span>
+              </a></li>
+          </ul>
+<p class="menu-label">Social</p>
+<ul class="menu-list">
+    <li><a href="https://github.com/XakV">
+      <span class="icon is-small">
+          <i class="fa fa-github fa-fw"></i>
+      </span>
+      <span class="link-text">Github</span>
+    </a></li>
+    <li><a href="https://pagure.io/user/aikidouke">
+      <span class="icon is-small">
+          <i class="fa fa-globe fa-fw"></i>
+      </span>
+      <span class="link-text">Pagure.io</span>
+    </a></li>
+    <li><a href="https://admin.fedoraproject.org/accounts/user/view/aikidouke">
+      <span class="icon is-small">
+          <i class="fa fa-globe fa-fw"></i>
+      </span>
+      <span class="link-text">Fedora - Aikidouke</span>
+    </a></li>
+    <li><a href="https://fosstodon.org/web/accounts/45241">
+      <span class="icon is-small">
+          <i class="fa fa-globe fa-fw"></i>
+      </span>
+      <span class="link-text">Fosstodon.org - Denderix</span>
+    </a></li>
+</ul>      </aside>
+    </div>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="container has-text-centered">
+    <div class="credits">
+      <span><a href="https://github.com/textbook/bulrush">Bulrush</a> theme for
+        <a href="https://blog.getpelican.com/">Pelican</a></span>
+      <span><span class="icon is-small"><i class="fa fa-html5"></i></span> HTML 5</span>
+      <span><span class="icon is-small"><i class="fa fa-css3"></i></span> CSS 3</span>
+      <img class="badge" src="https://bulma.io/images/made-with-bulma--black.png">
+    </div>
+  </div>
+</footer>
+
+<script type="text/javascript">
+  document.getElementById('navToggle').addEventListener('click', function () {
+    var nav = document.getElementById('navMenu');
+    var className = nav.getAttribute('class');
+    if (className == 'navbar-menu') {
+      nav.className = 'navbar-menu is-active';
+    } else {
+      nav.className = 'navbar-menu';
+    }
+  });
+</script>
+</body>
+</html>
