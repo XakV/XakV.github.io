@@ -1,0 +1,5 @@
+Pipfile*
+Makefile
+content
+develop_server.sh
+*.py
