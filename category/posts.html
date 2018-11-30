@@ -6,7 +6,19 @@
   <title>thought packets - Posts</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css">
+<<<<<<< HEAD
     <link rel="stylesheet" href="../theme/css/main.b71634c7.css">
+=======
+<<<<<<< HEAD
+    <link rel="stylesheet" href="../theme/css/main.610c74ec.css">
+=======
+<<<<<<< HEAD
+    <link rel="stylesheet" href="../theme/css/main.be52aa87.css">
+=======
+    <link rel="stylesheet" href="../theme/css/main.610c74ec.css">
+>>>>>>> thur8
+>>>>>>> 7d7eefe87b0597528fd9bbdcce9ed1934879aad5
+>>>>>>> 2a6b25ccbcb8e53516ebac43e82bbb5e3fe26dd5
   <style media="print">.is-hidden-print{display:none !important}</style>
 </head>
 
@@ -53,11 +65,33 @@
       <aside id="featured" class="body">
         <article>
           <h1 class="title">
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 2a6b25ccbcb8e53516ebac43e82bbb5e3fe26dd5
             <a href="../test-driven-python.html">Test Driven Python</a>
           </h1>
 <footer class="post-info">
   <abbr class="published" title="2018-11-16T23:20:00-05:00">
     Published <span class="is-info">Fri 16 November 2018</span>
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+            <a href="../masquerade-your-wifi.html">Masquerade of the Wifi Device</a>
+          </h1>
+<footer class="post-info">
+  <abbr class="published" title="2018-10-30T23:20:00-04:00">
+    Published <span class="is-info">Tue 30 October 2018</span>
+=======
+            <a href="../reset-znc-pass.html">Same thing we do every night Pinky, reset our ZNC password</a>
+          </h1>
+<footer class="post-info">
+  <abbr class="published" title="2018-11-08T10:44:00-05:00">
+    Published <span class="is-info">Thu 08 November 2018</span>
+>>>>>>> thur8
+>>>>>>> 7d7eefe87b0597528fd9bbdcce9ed1934879aad5
+>>>>>>> 2a6b25ccbcb8e53516ebac43e82bbb5e3fe26dd5
     in <a href="../category/posts.html">Posts</a>
   </abbr>
 
@@ -65,19 +99,75 @@
       <em>by           <a class="url fn" href="../author/zach-villers.html">Zach Villers</a>
 </em>
       <span class="tag is-small is-rounded">
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 2a6b25ccbcb8e53516ebac43e82bbb5e3fe26dd5
         <a href="../tag/python.html">Python</a>
       </span>
       <span class="tag is-small is-rounded">
         <a href="../tag/development.html">Development</a>
+<<<<<<< HEAD
+=======
+=======
+        <a href="../tag/linux.html">Linux</a>
+      </span>
+      <span class="tag is-small is-rounded">
+        <a href="../tag/firewall.html">Firewall</a>
+      </span>
+      <span class="tag is-small is-rounded">
+        <a href="../tag/libvirt.html">libvirt</a>
+>>>>>>> 7d7eefe87b0597528fd9bbdcce9ed1934879aad5
+>>>>>>> 2a6b25ccbcb8e53516ebac43e82bbb5e3fe26dd5
       </span>
     </p>
   
 </footer>          <div class="section">
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 2a6b25ccbcb8e53516ebac43e82bbb5e3fe26dd5
             <h3>Test Driven Development - <strong>YAWN</strong> - AMIRIGHT?</h3>
 <p>Well, no, I'm not all. It's too soon for me to be all-in-fanboy-bought-the-season-tickets, however, I wouldn't be surprised if I was trying TDD out as a dog-training model soon. It's late, so, I'll just say this, TDD seems like a good way to bridge the gap from "I can slice strings in at least three different ways!" to actually being able to carve out code from an idea. </p>
 <p>What's the biggest pain in learning to code for you? For me, it's a toss-up. I go through phases like, "I've done the tutorial, what now?", and "I could do a complicated thing, but this language is just not made for it.", and probably other excuses. TDD says, "Hey take one idea out of a bunch, fail at that, then write some code to fix it, now make it look nice." </p>
 <p>Note, this is a major over-simplification....</p>
 <p>The idea though is to work on small bits, a thing that solves one problem, then go on to the next thing. Put a few things together, revise, make sure it still works, and repeat. For someone that doesn't have a ton of programming experience, the bigger value is in the chunking of work. It's a framework for breaking big problems into smaller problems, and at the same time, you are able to keep track of the big picture. Moreover, failure is not only an option, it's step one.</p>
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+            <h3>Ever try to run libvirt on your laptop WiFi?</h3>
+<p>Please untie the noose, it will be ok....I think. The long and short of this is, libvirtd can't use a WiFi device. Which creates pain for me. Setting the wifi device to forward ipv4 and then using firewalld to masquerade packets between the laptop's wifi and ethernet device seems to work.</p>
+<p><strong>Like This</strong></p>
+<div class="highlight"><pre><span></span>    firewall-cmd --direct --add-rule ipv4 nat POSTROUTING 0 -o wlp3s0 -j MASQUERADE
+    firewall-cmd --direct --add-rule ipv4 filter FORWARD 0 -i enp0s25 -o wlp3s0 -j accept
+    firewall-cmd --direct --add-rule ipv4 filter FORWARD 0 -i enp0s25 -o wlp3s0 -j ACCEPT
+    firewall-cmd --direct --add-rule ipv4 filter FORWARD 0 -i wlp3s0 -o enp0s25 -m state --state RELATED,ESTABLISHED -j ACCEPT
+    firewall-cmd --runtime-to-permanent
+</pre></div>
+
+
+<p><strong>DONT FORGET TO SET THE IPV4 SYSCTL Tunable</strong></p>
+<div class="highlight"><pre><span></span>    sysctl -p net.ipv4.blah.blah.thing
+</pre></div>
+          </div>
+        </article>
+      </aside>
+=======
+            <h3>If I write it down somewhere, I'll remember it. Why don't I do that with passwords?</h3>
+<p>~right~</p>
+<p>For the next time you forget your znc password, here is how to reset it.</p>
+<div class="highlight"><pre><span></span>    [me@abox]$ znc --makepass
+    [me@abox]$ # this returns a hash and a salted password
+    [me@abox]$ vi /var/run/znc/.znc/configs/znc.conf
+    [me@abox]$ # then copy/paste in the new password and hash
+    [me@abox]$ # it should be at the bottom of the config file
+</pre></div>
+
+
+<p>Easy, Peasey, and Lemon-Squeezey.</p>
+>>>>>>> 7d7eefe87b0597528fd9bbdcce9ed1934879aad5
+>>>>>>> 2a6b25ccbcb8e53516ebac43e82bbb5e3fe26dd5
           </div>
         </article>
       </aside>
@@ -108,6 +198,13 @@
   </ul>
 </nav>
 <br>  </div>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> thur8
+>>>>>>> 7d7eefe87b0597528fd9bbdcce9ed1934879aad5
+>>>>>>> 2a6b25ccbcb8e53516ebac43e82bbb5e3fe26dd5
     </div>
 
     <div class="column is-one-quarter-desktop is-one-third-tablet is-hidden-print">
