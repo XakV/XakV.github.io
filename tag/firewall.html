@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article#">
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width">
+  <title>thought packets - Firewall</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css">
+    <link rel="stylesheet" href="../theme/css/main.b71634c7.css">
+  <style media="print">.is-hidden-print{display:none !important}</style>
+</head>
+
+<body id="index" class="home">
+<header class="hero is-primary">
+  <div class="hero-head">
+    <div class="container">
+      <nav class="navbar">
+        <div class="navbar-brand">
+          <a class="navbar-item title is-3"
+             href="../">thought packets</a>
+        </div>
+      </nav>
+    </div>
+  </div>
+</header>
+
+<nav class="navbar has-shadow is-hidden-print">
+  <div class="container">
+    <div class="navbar-center"></div>
+    <span id="navToggle" class="navbar-burger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </span>
+    <div id="navMenu" class="navbar-menu">
+        <div class="navbar-end">
+              <a class="navbar-item is-tab "
+                 href="../category/rhce.html">RHCE</a>
+              <a class="navbar-item is-tab "
+                 href="../category/posts.html">Posts</a>
+              <a class="navbar-item is-tab "
+                 href="../category/links.html">Links</a>
+              <a class="navbar-item is-tab "
+                 href="../category/about.html">About</a>
+        </div>
+    </div>
+  </div>
+</nav>
+
+<div class="container">
+  <div class="section columns">
+    <div class="column is-three-quarters-desktop is-two-thirds-tablet">
+      <aside id="featured" class="body">
+        <article>
+          <h1 class="title">
+            <a href="../masquerade-your-wifi.html">Masquerade of the Wifi Device</a>
+          </h1>
+<footer class="post-info">
+  <abbr class="published" title="2018-10-30T23:20:00-04:00">
+    Published <span class="is-info">Tue 30 October 2018</span>
+    in <a href="../category/posts.html">Posts</a>
+  </abbr>
+
+    <p class="author">
+      <em>by           <a class="url fn" href="../author/zach-villers.html">Zach Villers</a>
+</em>
+      <span class="tag is-small is-rounded">
+        <a href="../tag/linux.html">Linux</a>
+      </span>
+      <span class="tag is-small is-rounded">
+        <a href="../tag/firewall.html">Firewall</a>
+      </span>
+      <span class="tag is-small is-rounded">
+        <a href="../tag/libvirt.html">libvirt</a>
+      </span>
+    </p>
+  
+</footer>          <div class="section">
+            <h3>Ever try to run libvirt on your laptop WiFi?</h3>
+<p>Please untie the noose, it will be ok....I think. The long and short of this is, libvirtd can't use a WiFi device. Which creates pain for me. Setting the wifi device to forward ipv4 and then using firewalld to masquerade packets between the laptop's wifi and ethernet device seems to work.</p>
+<p><strong>Like This</strong></p>
+<div class="highlight"><pre><span></span>    firewall-cmd --direct --add-rule ipv4 nat POSTROUTING 0 -o wlp3s0 -j MASQUERADE
+    firewall-cmd --direct --add-rule ipv4 filter FORWARD 0 -i enp0s25 -o wlp3s0 -j accept
+    firewall-cmd --direct --add-rule ipv4 filter FORWARD 0 -i enp0s25 -o wlp3s0 -j ACCEPT
+    firewall-cmd --direct --add-rule ipv4 filter FORWARD 0 -i wlp3s0 -o enp0s25 -m state --state RELATED,ESTABLISHED -j ACCEPT
+    firewall-cmd --runtime-to-permanent
+</pre></div>
+
+
+<p><strong>DONT FORGET TO SET THE IPV4 SYSCTL Tunable</strong></p>
+<div class="highlight"><pre><span></span>    sysctl -p net.ipv4.blah.blah.thing
+</pre></div>
+          </div>
+        </article>
+      </aside>
+    </div>
+
+    <div class="column is-one-quarter-desktop is-one-third-tablet is-hidden-print">
+      <aside class="menu">
+          <p class="menu-label">Links</p>
+          <ul class="menu-list">
+              <li><a href="http://getpelican.com/">
+                <span class="icon is-small"><i class="fa fa-globe fa-fw"></i></span>
+                <span class="link-text">Pelican</span>
+              </a></li>
+              <li><a href="http://python.org/">
+                <span class="icon is-small"><i class="fa fa-globe fa-fw"></i></span>
+                <span class="link-text">Python.org</span>
+              </a></li>
+          </ul>
+<p class="menu-label">Social</p>
+<ul class="menu-list">
+    <li><a href="https://github.com/XakV">
+      <span class="icon is-small">
+          <i class="fa fa-github fa-fw"></i>
+      </span>
+      <span class="link-text">Github</span>
+    </a></li>
+    <li><a href="https://pagure.io/user/aikidouke">
+      <span class="icon is-small">
+          <i class="fa fa-globe fa-fw"></i>
+      </span>
+      <span class="link-text">Pagure.io</span>
+    </a></li>
+    <li><a href="https://admin.fedoraproject.org/accounts/user/view/aikidouke">
+      <span class="icon is-small">
+          <i class="fa fa-globe fa-fw"></i>
+      </span>
+      <span class="link-text">Fedora - Aikidouke</span>
+    </a></li>
+    <li><a href="https://fosstodon.org/web/accounts/45241">
+      <span class="icon is-small">
+          <i class="fa fa-globe fa-fw"></i>
+      </span>
+      <span class="link-text">Fosstodon.org - Denderix</span>
+    </a></li>
+</ul>      </aside>
+    </div>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="container has-text-centered">
+    <div class="credits">
+      <span><a href="https://github.com/textbook/bulrush">Bulrush</a> theme for
+        <a href="https://blog.getpelican.com/">Pelican</a></span>
+      <span><span class="icon is-small"><i class="fa fa-html5"></i></span> HTML 5</span>
+      <span><span class="icon is-small"><i class="fa fa-css3"></i></span> CSS 3</span>
+      <img class="badge" src="https://bulma.io/images/made-with-bulma--black.png">
+    </div>
+  </div>
+</footer>
+
+<script type="text/javascript">
+  document.getElementById('navToggle').addEventListener('click', function () {
+    var nav = document.getElementById('navMenu');
+    var className = nav.getAttribute('class');
+    if (className == 'navbar-menu') {
+      nav.className = 'navbar-menu is-active';
+    } else {
+      nav.className = 'navbar-menu';
+    }
+  });
+</script>
+</body>
+</html>
